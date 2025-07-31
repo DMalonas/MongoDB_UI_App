@@ -1,0 +1,67 @@
+{
+  "name": "mongo_garden_2",
+  "version": "1.0.0",
+  "main": "bunny.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0"
+  }
+}
+
+,
+
+{
+  "filter": { "name": "Daisy" },
+  "update": {
+    "$set": {
+      "buddy": "Nimbus",
+      "household_size": 2
+    },
+    "$push": {
+      "campaigns": {
+        "name": "Burrow Buddies Program",
+        "date": { "$date": "2025-06-09T10:00:00Z" },
+        "engaged": true
+      }
+    },
+    "$inc": {
+      "tech_savviness": 1
+    }
+  }
+}
+
+,
+
+{
+  "name": "Thumper",
+  "age": 2,                           
+  "color": "white",
+  "hunger": 4,  // 0 (full) to 10 (starving)
+  "location": {
+    "zone": "North Meadow",
+    "x": 120,
+    "y": 245
+  },
+  "interests": ["digging", "carrots", "community building"],
+  "tech_savviness": 3,                 // scale 0–5
+  "household_size": 3,
+  "vaccinated": true,
+  "last_meal": ISODate("2025-06-07T14:00:00Z"),
+  "campaigns": [
+    {
+      "name": "Eco Flyer 1",
+      "date": ISODate("2025-06-01T10:00:00Z"),
+      "engaged": true
+    }
+  ],
+  "notes": "Prefers shaded areas. Recently fought with Nibbles."
+}
